@@ -1,5 +1,10 @@
 About Build tool Maven
-
 Developers will be writing some code and as we cannot provide that code directly to the customers we use a Build tool called Maven.
-
+To take the source code compile and convert it into executable format which can be jar war or ear and then deploy them into servers.
+Both Developers and Devops engineers will be using Build tool heavily.
+First we need to build the source code into a package to start the pipeline.
+Majority of the files in Maven are written by developers such as pom.xml or source code creation but as a Devops Engineer you should also have a Good 
+understanding of Maven bcoz if something went wrong you should be able to know who did the mistake.
+Maven is not an executable file meaning that the system cannot find the Maven executable or it does not have the necessary permissions to execute it.
+On some systems, you need to configure the system's PATH environment variable to include the path to the Maven executable. The PATH variable allows the system to locate and execute the Maven command from any directory. Verify if the PATH variable includes the Maven installation directory.
 
