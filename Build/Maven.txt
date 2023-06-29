@@ -46,4 +46,18 @@ project-name/
 ├── README.md
 └── ...
 
+src/main/java: This directory contains the main Java source code of your project. The package structure typically follows the reverse domain name convention, such as com.yourcompany. Inside this package, you can have different directories for controllers, services, models, etc., depending on your application's architecture and design.
+
+src/main/resources: This directory contains non-Java resources that your application needs, such as configuration files, property files, XML files, etc.
+
+src/test/java: This directory contains the test source code for your project. It follows a similar structure as the main source code, with tests organized in packages based on the functionality they test.
+
+src/test/resources: This directory contains resources specifically used for testing, such as test data files, configuration files, etc.
+
+build.gradle (or pom.xml for Maven projects): This is the build configuration file for your project. It defines dependencies, build settings, and other project-specific configurations.
+
+settings.gradle: This file is used to configure the overall project settings, such as the project name, modules, etc.
+
+README.md: This is a text file that provides information about your project, including its purpose, how to set it up, and any other relevant details.
+
 
