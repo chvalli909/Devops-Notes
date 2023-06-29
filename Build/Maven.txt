@@ -7,4 +7,6 @@ Majority of the files in Maven are written by developers such as pom.xml or sour
 understanding of Maven bcoz if something went wrong you should be able to know who did the mistake.
 Maven is not an executable file meaning that the system cannot find the Maven executable or it does not have the necessary permissions to execute it.
 On some systems, you need to configure the system's PATH environment variable to include the path to the Maven executable. The PATH variable allows the system to locate and execute the Maven command from any directory. Verify if the PATH variable includes the Maven installation directory.
+First we need to have Jdk for Maven and that too for which Maven which Java supports is also very important.
+You should use Maven version of which your developers support not the one of your choice or the latest release.
 
