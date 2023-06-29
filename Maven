@@ -1,2 +1,5 @@
 About Build tool Maven
 
+Developers will be writing some code and as we cannot provide that code directly to the customers we use a Build tool called Maven.
+
+
