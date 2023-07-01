@@ -1,0 +1,45 @@
+In second job we created clone using manual steps but in this job we will try to clone it directly from Git using SCM Git option 
+If it is a public repo it will not for credentials but if it is a private one you have to give credentials and then have to Build the job.
+when I tried to build the job it failed and gave the outout as
+Started by user Srivalli
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/job3
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/GoogleCloudPlatform/microservices-demo.git
+ > git init /var/lib/jenkins/workspace/job3 # timeout=10
+Fetching upstream changes from https://github.com/GoogleCloudPlatform/microservices-demo.git
+ > git --version # timeout=10
+ > git --version # 'git version 1.8.3.1'
+ > git fetch --tags --progress https://github.com/GoogleCloudPlatform/microservices-demo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/GoogleCloudPlatform/microservices-demo.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse origin/master^{commit} # timeout=10
+ERROR: Couldn't find any revision to build. Verify the repository and branch configuration for this job.
+Finished: FAILURE
+
+Failure reason is they specified branch as main but in my Branch specifier in jenkins configuration by default it took master so I changed it to main 
+and then the build got through and gave me the output as 
+Started by user Srivalli
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/job3
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/job3/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/GoogleCloudPlatform/microservices-demo.git # timeout=10
+Fetching upstream changes from https://github.com/GoogleCloudPlatform/microservices-demo.git
+ > git --version # timeout=10
+ > git --version # 'git version 1.8.3.1'
+ > git fetch --tags --progress https://github.com/GoogleCloudPlatform/microservices-demo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision cea8d946a7f67566e0f6241ce08030134b69e21e (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f cea8d946a7f67566e0f6241ce08030134b69e21e # timeout=10
+Commit message: "chore(deps): update dependency google-auth to v2.21.0 (#1883)"
+First time build. Skipping changelog.
+Finished: SUCCESS
+
