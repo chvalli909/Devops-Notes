@@ -28,6 +28,17 @@ By running this command with administrative privileges, you are instructing the 
 This key is typically used to sign and verify the authenticity of packages from the Jenkins software repository,
 allowing you to trust and install packages from that repository securely.
 
+Next install jenkins using yum install jenkins and check the status by using systemctl status jenkins which says ● jenkins.service - Jenkins Continuous Integration Server
+   Loaded: loaded (/usr/lib/systemd/system/jenkins.service; disabled; vendor preset: disabled)
+   Active: inactive (dead)
+so start the service by giving systemctl start jenkins
+
+when jenkins is installed by default jenkins user is created you can check it under cat /etc/passwd/ which shows jenkins:x:997:995:Jenkins Automation Server:/var/lib/jenkins:/bin/false
+
+
+
+
+
 
 
 
