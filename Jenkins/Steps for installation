@@ -34,7 +34,36 @@ To enable trafiic to port 8080 you have to allow traffic from all ports in Firew
 You will login into Jenkins dashboard. Manage jenkins is the most important part bcoz if you get any issue in jenkins you will come here if you want to add any plugins
 or if you need to do any configurations you will come here.
 /var/lib/jenkins is the home directory for jenkins. By default, Jenkins stores all of its data in this directory on the file system
+ls -l /var/lib/jenkins/
+total 56
+drwxr-xr-x.  3 jenkins jenkins   21 Jul  1 15:17 %C
+-rw-r--r--.  1 jenkins jenkins 1660 Jul  1 15:18 config.xml
+-rw-r--r--.  1 jenkins jenkins  156 Jul  1 15:17 hudson.model.UpdateCenter.xml
+-rw-r--r--.  1 jenkins jenkins 1303 Jul  1 19:21 hudson.plugins.emailext.ExtendedEmailPublisher.xml
+-rw-r--r--.  1 jenkins jenkins  370 Jul  1 15:34 hudson.plugins.git.GitTool.xml
+-rw-------.  1 jenkins jenkins 1680 Jul  1 15:34 identity.key.enc
+-rw-r--r--.  1 jenkins jenkins    7 Jul  1 18:42 jenkins.install.InstallUtil.lastExecVersion
+-rw-r--r--.  1 jenkins jenkins    7 Jul  1 18:42 jenkins.install.UpgradeWizard.state
+-rw-r--r--.  1 jenkins jenkins  183 Jul  1 18:42 jenkins.model.JenkinsLocationConfiguration.xml
+-rw-r--r--.  1 jenkins jenkins  171 Jul  1 15:17 jenkins.telemetry.Correlator.xml
+drwxr-xr-x.  3 jenkins jenkins   18 Jul  1 19:32 jobs
+-rw-r--r--.  1 jenkins jenkins  907 Jul  1 15:17 nodeMonitors.xml
+drwxr-xr-x.  2 jenkins jenkins    6 Jul  1 15:17 nodes
+drwxr-xr-x. 84 jenkins jenkins 8192 Jul  1 15:34 plugins
+-rw-r--r--.  1 jenkins jenkins   64 Jul  1 15:17 secret.key
+-rw-r--r--.  1 jenkins jenkins    0 Jul  1 15:17 secret.key.not-so-secret
+drwx------.  2 jenkins jenkins  162 Jul  1 19:31 secrets
+drwxr-xr-x.  2 jenkins jenkins  149 Jul  1 15:34 updates
+drwxr-xr-x.  2 jenkins jenkins   24 Jul  1 15:17 userContent
+drwxr-xr-x.  3 jenkins jenkins   62 Jul  1 15:36 users
 
+First time if you open and see /var/lib/jenkins/ you don't see any workspace created here
+All the jobs which you created will be available in /var/lib/jenkins/jobs/
+Try to create one job with name job1 using freestyle and use Build step Execute shell
+In execute shell give whoami then Build now and goto console output and see the result
+It says Running as a system and jenkins user should have permissions to execute packages as default user is Jenkins
+By default all the plugins will be installed in /var/lib/jenkins/plugins/
+ 
 
 
 
