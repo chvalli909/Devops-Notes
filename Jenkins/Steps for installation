@@ -17,6 +17,18 @@ It provides a way to configure and customize font settings for various applicati
 "java-11-openjdk" is the name of the second package to be installed. It refers to OpenJDK 11, which is an open-source implementation of the Java Development Kit (JDK) version 11.
 OpenJDK allows you to run Java applications and develop software using the Java programming language.
 
+Next we have to use sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo where wget is a command-line utility used to download files from the web.
+It stands for "web get." With wget, you can retrieve files from HTTP, HTTPS, and FTP servers directly to your local machine.
+
+Now see whether jenkins repo is there or not by using ls -la /etc/yum.repos.d/ in which jenkins repo will be present.
+
+Next we use the command "sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key" which is used to import a GPG key into the RPM (Red Hat Package Manager) keyring.
+
+By running this command with administrative privileges, you are instructing the RPM package manager to import the GPG key from the specified URL. 
+This key is typically used to sign and verify the authenticity of packages from the Jenkins software repository,
+allowing you to trust and install packages from that repository securely.
+
+
 
 
 
