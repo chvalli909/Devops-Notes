@@ -1,0 +1,8 @@
+I will track all the steps done while practising jenkins
+
+First I created a vm using gcloud command thorugh cloud shell using this gcloud compute instances create jenkinsserver --zone=us-west4-b
+--machine-type=e2-medium --create-disk=auto-delete=yes,boot=yes,device-name=jenkins,image=projects/centos-cloud/global/images/centos-7-v20221206,mode=rw,size=20
+and then checked in Compute Engine whether the jenkins instance is created or not.
+
+
+
