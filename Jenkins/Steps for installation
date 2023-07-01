@@ -33,7 +33,8 @@ To enable trafiic to port 8080 you have to allow traffic from all ports in Firew
 
 You will login into Jenkins dashboard. Manage jenkins is the most important part bcoz if you get any issue in jenkins you will come here if you want to add any plugins
 or if you need to do any configurations you will come here.
-/var/lib/jenkins is th ehome directory for jenkins. By default, Jenkins stores all of its data in this directory on the file system
+/var/lib/jenkins is the home directory for jenkins. By default, Jenkins stores all of its data in this directory on the file system
+
 
 
 
