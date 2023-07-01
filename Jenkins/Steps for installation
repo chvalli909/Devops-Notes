@@ -6,14 +6,10 @@ and then checked in Compute Engine whether the jenkins instance is created or no
 
 To run jenkins you should have java but when I checked after sshing into server using java -version it says -bash: java: command not found so first I need to 
 install java into my centos machine using the command yum install fontconfig java-11-openjdk.
-
 "yum" is a package manager command used primarily in Red Hat-based Linux distributions, such as Fedora and CentOS.
-
 "install" is an argument passed to the "yum" command to specify that we want to install packages.
-
 "fontconfig" is the name of the first package to be installed. Fontconfig is a library used to manage fonts on Linux systems.
 It provides a way to configure and customize font settings for various applications.
-
 "java-11-openjdk" is the name of the second package to be installed. It refers to OpenJDK 11, which is an open-source implementation of the Java Development Kit (JDK) version 11.
 OpenJDK allows you to run Java applications and develop software using the Java programming language.
 
@@ -21,9 +17,7 @@ Next we have to use sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenki
 It stands for "web get." With wget, you can retrieve files from HTTP, HTTPS, and FTP servers directly to your local machine.
 
 Now see whether jenkins repo is there or not by using ls -la /etc/yum.repos.d/ in which jenkins repo will be present.
-
 Next we use the command "sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key" which is used to import a GPG key into the RPM (Red Hat Package Manager) keyring.
-
 By running this command with administrative privileges, you are instructing the RPM package manager to import the GPG key from the specified URL. 
 This key is typically used to sign and verify the authenticity of packages from the Jenkins software repository,
 allowing you to trust and install packages from that repository securely.
@@ -32,8 +26,17 @@ Next install jenkins using yum install jenkins and check the status by using sys
    Loaded: loaded (/usr/lib/systemd/system/jenkins.service; disabled; vendor preset: disabled)
    Active: inactive (dead)
 so start the service by giving systemctl start jenkins
-
 when jenkins is installed by default jenkins user is created you can check it under cat /etc/passwd/ which shows jenkins:x:997:995:Jenkins Automation Server:/var/lib/jenkins:/bin/false
+Login into jenkins server by doing cat to password path provided and install recommended plugins and create your own userid and password to login into jenkins server 
+from next time. Only first time it asks for Pssword to enter. Once you give useid and password you will see your publicip:8080 as jenkins is accessible on port 8080.
+To enable trafiic to port 8080 you have to allow traffic from all ports in Firewall rule in VPC Network section.
+
+You will login into Jenkins dashboard. Manage jenkins is the most important part bcoz if you get any issue in jenkins you will come here if you want to add any plugins
+or if you need to do any configurations you will come here.
+/var/lib/jenkins is th ehome directory for jenkins. By default, Jenkins stores all of its data in this directory on the file system
+
+
+
 
 
 
