@@ -21,3 +21,7 @@ Building in workspace /var/lib/jenkins/workspace/job2
 + git clone https://github.com/GoogleCloudPlatform/microservices-demo.git
 Cloning into 'microservices-demo'...
 Finished: SUCCESS
+
+And when i checked in ls /var/lib/jenkins/workspace/job2
+microservices-demo could be seen
+
