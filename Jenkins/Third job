@@ -43,3 +43,14 @@ Commit message: "chore(deps): update dependency google-auth to v2.21.0 (#1883)"
 First time build. Skipping changelog.
 Finished: SUCCESS
 
+one more point to track here is when I check cd workspace/
+[root@jenkinsserver workspace]# ls
+job1  job2  job3
+[root@jenkinsserver workspace]# ls job3
+cloudbuild.yaml  docs  helm-chart  istio-manifests  kubernetes-manifests  kustomize  LICENSE  protos  README.md  release  skaffold.yaml  src  terraform
+[root@jenkinsserver workspace]# ls job2
+microservices-demo
+
+In job2 the complete folder is being cloned as we did it manually by giving git clone
+But in job3 entire code has been populated but not as a folder.
+
