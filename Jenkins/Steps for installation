@@ -4,5 +4,21 @@ First I created a vm using gcloud command thorugh cloud shell using this gcloud 
 --machine-type=e2-medium --create-disk=auto-delete=yes,boot=yes,device-name=jenkins,image=projects/centos-cloud/global/images/centos-7-v20221206,mode=rw,size=20
 and then checked in Compute Engine whether the jenkins instance is created or not.
 
+To run jenkins you should have java but when I checked after sshing into server using java -version it says -bash: java: command not found so first I need to 
+install java into my centos machine using the command yum install fontconfig java-11-openjdk.
+
+"yum" is a package manager command used primarily in Red Hat-based Linux distributions, such as Fedora and CentOS.
+
+"install" is an argument passed to the "yum" command to specify that we want to install packages.
+
+"fontconfig" is the name of the first package to be installed. Fontconfig is a library used to manage fonts on Linux systems.
+It provides a way to configure and customize font settings for various applications.
+
+"java-11-openjdk" is the name of the second package to be installed. It refers to OpenJDK 11, which is an open-source implementation of the Java Development Kit (JDK) version 11.
+OpenJDK allows you to run Java applications and develop software using the Java programming language.
+
+
+
+
 
 
