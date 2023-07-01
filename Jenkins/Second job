@@ -1,0 +1,23 @@
+Whatever job you are performing those stepd are all placed in /var/lib/jenkins/jobs section
+All the data that has been populated after building the job will be present in /var/lib/jenkins/workspace section
+
+In seond job I am trying to clone a repo 
+But as Git is not installed in my vm it said the below error and failed to build.
+Started by user Srivalli
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/job2
+[job2] $ /bin/sh -xe /tmp/jenkins8620327081045003846.sh
++ git clone https://github.com/GoogleCloudPlatform/microservices-demo.git
+/tmp/jenkins8620327081045003846.sh: line 3: git: command not found
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE
+so the next step is to install Git in my vm using yum install git -y as it is centos machine
+
+I ran the job again and now the Build got succesful as we installed Git this time and the output is
+Started by user Srivalli
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/job2
+[job2] $ /bin/sh -xe /tmp/jenkins7060459989039000746.sh
++ git clone https://github.com/GoogleCloudPlatform/microservices-demo.git
+Cloning into 'microservices-demo'...
+Finished: SUCCESS
