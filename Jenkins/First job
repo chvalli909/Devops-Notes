@@ -60,3 +60,5 @@ But it is always a Good practice not to have your data in workspace because if y
 your artifact wil come into this workspace which is not acceptable.
 so we have to do all the configuration of not placing your data in workspace.
 Typically you will be pushing all the data to jfrog repository and then building the job.
+
+Freestyle are not being used widely now, we use them mostly to test our Business logic whether it is working or not.
