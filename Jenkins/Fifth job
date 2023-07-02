@@ -1,0 +1,7 @@
+I am trying to install webserver in this job
+so I went to build steps and performed these commands
+sudo yum install httpd -y
+sudo systemctl start httpd
+sudo systemctl enable httpd
+I tried to Build the job and it got success
+so I hit the public ip and the webserver page got populated which is httpd default page.
