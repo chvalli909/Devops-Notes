@@ -1,4 +1,4 @@
-Whatever job you are performing those stepd are all placed in /var/lib/jenkins/jobs section
+Whatever job you are performing those steps are all placed in /var/lib/jenkins/jobs section
 All the data that has been populated after building the job will be present in /var/lib/jenkins/workspace section
 
 In seond job I am trying to clone a repo 
