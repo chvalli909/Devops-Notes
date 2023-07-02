@@ -1,0 +1,24 @@
+job4 was to update the repo and I have given sudo yum update -y command and tried to Build it
+But it has given me an error specifying 
+Started by user Srivalli
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/job4
+[job4] $ /bin/sh -xe /tmp/jenkins4646764430503410844.sh
++ sudo yum update -y
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+sudo: no tty present and no askpass program specified
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE
+so the Build failed as jenkins doesn't have permissions to do the task with root user so we have to give jenkins sudo permission by giving
+visudo and give jenkins         ALL=(ALL)       NOPASSWD: ALL
+Then I tried to execute again and it got through this time.
+But it took lot of time to run this job as it is update of packages in centos machine
+If it is taking long time at times you can even abort the job in the middle by closing the red botton pointed at Build number
+
