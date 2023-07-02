@@ -1,5 +1,5 @@
 In second job we created clone using manual steps but in this job we will try to clone it directly from Git using SCM Git option 
-If it is a public repo it will not for credentials but if it is a private one you have to give credentials and then have to Build the job.
+If it is a public repo it will not ask for credentials but if it is a private one you have to give credentials and then have to Build the job.
 when I tried to build the job it failed and gave the outout as
 Started by user Srivalli
 Running as SYSTEM
@@ -51,6 +51,6 @@ cloudbuild.yaml  docs  helm-chart  istio-manifests  kubernetes-manifests  kustom
 [root@jenkinsserver workspace]# ls job2
 microservices-demo
 
-In job2 the complete folder is being cloned as we did it manually by giving git clone
-But in job3 entire code has been populated but not as a folder.
+In job2 the complete folder is being cloned as we did it manually by giving git clone in Exucute shell option
+But in job3 entire code has been populated but not as a folder because we provided SCM option directly to clone it from repo without giving git clone.
 
