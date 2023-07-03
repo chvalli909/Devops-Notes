@@ -5,3 +5,11 @@ sudo systemctl start httpd
 sudo systemctl enable httpd
 I tried to Build the job and it got success
 so I hit the public ip and the webserver page got populated which is httpd default page.
+
+But here I got an use case in which I don't want to populate the default httpd page but 
+I want to copy developer created html page from Git and then copy the file to webserver
+so to solve this first I cloned the html page repo from Git and then copied the files to webserver
+by configuring the fifth job itself again and added 2 more stepd to it.
+
+Always check whatever chnages you do in /var/lib/jenkins/ home directory
+then check in workspace all the jobs and their related data in it.
