@@ -1,0 +1,9 @@
+Now we will learn about Build periodically and Poll scm options
+This case may arise when the developer writes the code and you have to get 
+those changes automatically from Git.
+
+Build periodically is just like cron jobs you can give timeframe and it will trigger
+build even though there is no change in Git.
+
+Where as in Poll Scm here also you can give time frame and it triggers build only if there is 
+change in Git.
