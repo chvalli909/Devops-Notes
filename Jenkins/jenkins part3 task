@@ -1,0 +1,3 @@
+We are installing maven in Jenkins master but in real time we will not do it and all the jobs
+are performed in slaves only but not in master.
+
