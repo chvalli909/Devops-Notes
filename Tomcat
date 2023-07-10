@@ -1,0 +1,21 @@
+For Tomcat 9 we need atleast java 8 and above and for Tomcat Jre is enough but for maven we need Jdk which includes both Jre and additional tools as well.
+
+Root
+            |
+         -------
+        |       |
+       JRE     JDK
+
+
+       JRE
+        |
+   ------------
+  |            |
+Libraries     JVM
+
+
+        JDK
+         |
+   ----------------
+  |                |
+JRE            Tools
